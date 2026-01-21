@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Dongseo gamejam.sln"
+    "dotnet.defaultSolution": "Decommission-Last-Light-of-ISS.sln"
 }
