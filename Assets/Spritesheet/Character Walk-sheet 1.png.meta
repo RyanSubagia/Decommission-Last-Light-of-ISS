@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 364eb8f36c1a14b47b715afc2954fdcf
+guid: 5424ae83c5f534e4f8ef7eaa981b134c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -141,10 +141,10 @@ TextureImporter:
       name: Character Walk-sheet_1
       rect:
         serializedVersion: 2
-        x: 47
-        y: 3
-        width: 28
-        height: 54
+        x: 44
+        y: 2
+        width: 35
+        height: 55
       alignment: 9
       pivot: {x: 0.5714286, y: 0.2777778}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +183,10 @@ TextureImporter:
       name: Character Walk-sheet_3
       rect:
         serializedVersion: 2
-        x: 127
-        y: 3
-        width: 28
-        height: 54
+        x: 124
+        y: 2
+        width: 32
+        height: 55
       alignment: 9
       pivot: {x: 0.5714286, y: 0.2777778}
       border: {x: 0, y: 0, z: 0, w: 0}
