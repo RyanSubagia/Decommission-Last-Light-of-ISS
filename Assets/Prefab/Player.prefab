@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 154664850}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,8 @@ GameObject:
   - component: {fileID: 2034625314}
   - component: {fileID: 8058020562335103679}
   - component: {fileID: 2034625317}
-  m_Layer: 0
+  - component: {fileID: 2453378603319938917}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 7
+  jumpForce: 8
   groundCheck: {fileID: 154664850}
   groundCheckRadius: 0.2
   groundLayer:
@@ -210,3 +211,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.6875}
   m_EdgeRadius: 0
+--- !u!114 &2453378603319938917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291885536816942007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd26ba9259b1ed468dc2b2431a7574a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactKey: 101
