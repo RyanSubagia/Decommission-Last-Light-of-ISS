@@ -16,7 +16,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    public void ShowPanel()
+    public virtual void ShowPanel()
     {
         if (interactionPanel == null)
             return;
@@ -25,7 +25,7 @@ public class Interactable : MonoBehaviour
         IsPanelOpen = true;
     }
 
-    public void HidePanel()
+    public virtual void HidePanel()
     {
         if (interactionPanel == null)
             return;
