@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuLogic : MonoBehaviour
 {
+    [SerializeField] private string introSceneName = "Intro";
     [SerializeField] private GameObject howToPanel;
     public void PlayGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(introSceneName);
     }
 
     public void QuitGame()

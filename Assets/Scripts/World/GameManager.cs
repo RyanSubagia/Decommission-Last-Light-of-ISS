@@ -16,13 +16,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float fadeDuration = 2f;
 
     [Header("Scene Names")] 
-    [SerializeField] private string gameOverSceneName = "GameOver";
-    [SerializeField] private string escapePodCutsceneSceneName = "Cutscene_Default";
-    [SerializeField] private string afterburnerCutsceneSceneName = "Cutscene_Afterburner";
+    [SerializeField] private string endingSceneName = "Ending";
 
     private float _remainingTime;
     private bool _countdownRunning;
     private bool _hasEnded;
+
+    public GameEndType LastEndType { get; private set; } = GameEndType.None;
 
     private void Awake()
     {
@@ -88,6 +88,14 @@ public class GameManager : MonoBehaviour
         StartCoroutine(HandleGameEnd(GameEndType.WinAfterburner));
     }
 
+    public void TriggerDefaultEnding()
+    {
+        if (_hasEnded)
+            return;
+
+        StartCoroutine(HandleGameEnd(GameEndType.LoseTimeUp));
+    }
+
     private void UpdateCountdownText()
     {
         if (txtxCountdown == null)
@@ -105,6 +113,8 @@ public class GameManager : MonoBehaviour
         _hasEnded = true;
         _countdownRunning = false;
 
+        LastEndType = endType;
+
         // Fade to black
         if (fadeCanvasGroup != null)
         {
@@ -118,24 +128,9 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        string sceneToLoad = null;
-
-        switch (endType)
+        if (!string.IsNullOrEmpty(endingSceneName))
         {
-            case GameEndType.LoseTimeUp:
-                sceneToLoad = gameOverSceneName;
-                break;
-            case GameEndType.WinEscapePod:
-                sceneToLoad = escapePodCutsceneSceneName;
-                break;
-            case GameEndType.WinAfterburner:
-                sceneToLoad = afterburnerCutsceneSceneName;
-                break;
-        }
-
-        if (!string.IsNullOrEmpty(sceneToLoad))
-        {
-            SceneManager.LoadScene(sceneToLoad);
+            SceneManager.LoadScene(endingSceneName);
         }
     }
 }
