@@ -18,6 +18,7 @@ public class DoorInteraction : MonoBehaviour
 
     private bool _isPlayerInRange;
     private bool _isOpen;
+    private bool _hasShownIndicator;
     
     private void Reset()
     {
@@ -46,17 +47,26 @@ public class DoorInteraction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        var indicator = other.GetComponentInParent<PlayerInteractionIndicator>();
+        if (indicator != null)
         {
             _isPlayerInRange = true;
+
+            if (!requireKey && !_hasShownIndicator)
+            {
+                indicator.Show();
+                _hasShownIndicator = true;
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        var indicator = other.GetComponentInParent<PlayerInteractionIndicator>();
+        if (indicator != null)
         {
             _isPlayerInRange = false;
+            indicator.Hide();
         }
     }
 
@@ -76,5 +86,13 @@ public class DoorInteraction : MonoBehaviour
         {
             blockingCollider.enabled = false;
         }
+    }
+
+    public void OpenFromConsole()
+    {
+        if (_isOpen)
+            return;
+
+        StartCoroutine(OpenDoorRoutine());
     }
 }

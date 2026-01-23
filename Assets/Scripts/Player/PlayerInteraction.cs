@@ -6,7 +6,18 @@ public class PlayerInteraction : MonoBehaviour
     [Header("Interaction Settings")]
     [SerializeField] private KeyCode interactKey = KeyCode.E;
 
+    [Header("Interaction Indicator")]
+    [SerializeField] private PlayerInteractionIndicator interactionIndicator;
+
     private Interactable currentInteractable;
+
+    private void Awake()
+    {
+        if (interactionIndicator == null)
+        {
+            interactionIndicator = GetComponent<PlayerInteractionIndicator>();
+        }
+    }
 
     private void Update()
     {
@@ -32,6 +43,11 @@ public class PlayerInteraction : MonoBehaviour
         if (interactable != null)
         {
             currentInteractable = interactable;
+
+            if (interactionIndicator != null)
+            {
+                interactionIndicator.Show();
+            }
         }
     }
 
@@ -46,6 +62,12 @@ public class PlayerInteraction : MonoBehaviour
             }
 
             currentInteractable = null;
+
+            if (interactionIndicator != null)
+            {
+                interactionIndicator.Hide();
+            }
         }
     }
 }
+

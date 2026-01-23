@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: lantai(3x3)_1
+  m_Name: panel n notes_0
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1408389281, guid: 1469e2f8ca2e7ea458c909d54f4affa3, type: 3}
+  m_Sprite: {fileID: 1506607938, guid: 1dceb85adafa50444b9e91a16778e523, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

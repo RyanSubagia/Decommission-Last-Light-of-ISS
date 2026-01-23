@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: lantai(3x3)_0
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1913805587, guid: dfe952d9fb9c4994886da672c663e86d, type: 3}
+  m_Sprite: {fileID: 1083353742, guid: 1469e2f8ca2e7ea458c909d54f4affa3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

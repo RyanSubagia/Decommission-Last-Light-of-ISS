@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1469e2f8ca2e7ea458c909d54f4affa3
+guid: 4a643d4223057a642b591677ff830328
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,11 +117,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lantai(3x3)_0
+      name: button e_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 10
+        y: 5
         width: 32
         height: 32
       alignment: 0
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e7d31cfd78e53648a8f9de7d124ced4
-      internalID: 1083353742
+      spriteID: 7ca3cd66c43fc0246b8f6714a515c611
+      internalID: 238540259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lantai(3x3)_1
+      name: button e_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 45
+        y: 5
         width: 32
-        height: 32
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f652aa9ea256274eb728537e7184496
-      internalID: 1408389281
+      spriteID: 41c006e556f76414b849ca115a3be67a
+      internalID: -1985390325
       vertices: []
       indices: 
       edges: []
@@ -169,8 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      lantai(3x3)_0: 1083353742
-      lantai(3x3)_1: 1408389281
+      button e_0: 238540259
+      button e_1: -1985390325
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
