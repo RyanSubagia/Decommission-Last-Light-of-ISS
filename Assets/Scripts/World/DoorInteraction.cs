@@ -12,6 +12,10 @@ public class DoorInteraction : MonoBehaviour
     [SerializeField] private string openTriggerName = "Open"; 
     [SerializeField] private float openDelay = 1f; 
 
+    [Header("Key Requirement")]
+    [SerializeField] private bool requireKey;
+    [SerializeField] private PlayerKeyInventory playerInventory;
+
     private bool _isPlayerInRange;
     private bool _isOpen;
     
@@ -28,6 +32,14 @@ public class DoorInteraction : MonoBehaviour
 
         if (_isPlayerInRange && Input.GetKeyDown(interactKey))
         {
+            if (requireKey)
+            {
+                if (playerInventory == null || !playerInventory.HasKey)
+                {
+                    return;
+                }
+            }
+
             StartCoroutine(OpenDoorRoutine());
         }
     }
