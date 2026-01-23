@@ -17173,7 +17173,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DECOMMISION
+  m_text: DECOMMISSION
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52638a0f326353a44a17cbfa6485c146, type: 2}
   m_sharedMaterial: {fileID: 8041529806494524209, guid: 52638a0f326353a44a17cbfa6485c146, type: 2}
@@ -18562,6 +18562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0a9fd2be80eef4fb8c5ddc83e54aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  introSceneName: Intro
   howToPanel: {fileID: 1800589214}
 --- !u!1 &1029485895
 GameObject:
