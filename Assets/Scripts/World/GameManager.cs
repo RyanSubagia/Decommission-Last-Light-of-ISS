@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [Header("Countdown Settings")]
-    [SerializeField] private float countdownDurationSeconds = 300f; // 5 minutes
+    [SerializeField] private float countdownDurationSeconds = 300f; 
     [SerializeField] private TMP_Text txtxCountdown;
 
     [Header("Fade Settings")]
