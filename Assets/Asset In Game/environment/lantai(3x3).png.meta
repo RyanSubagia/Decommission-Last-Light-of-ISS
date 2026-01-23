@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 07cb9acbd78b12b43974e4ab5d5ed735
+guid: dfe952d9fb9c4994886da672c663e86d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,28 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tembok2 1x3_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 395b9e0e432a7d144bfba31d9ebadb0e
-      internalID: 412440030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tembok2 1x3_1
+      name: lantai(3x3)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -146,35 +125,35 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e21bc5f170f7a0945bacbeb553d00099
-      internalID: -1604095683
+      spriteID: e27d36bec8de7414e93b7063f0cac293
+      internalID: 1913805587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tembok2 1x3_2
+      name: lantai(3x3)_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4592bcbcac0a3f84caadc94d24bed0a4
-      internalID: -1347736432
+      spriteID: 9805402defcd63f4f9a0f4d0d7df6a64
+      internalID: -574159699
       vertices: []
       indices: 
       edges: []
@@ -190,9 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tembok2 1x3_0: 412440030
-      tembok2 1x3_1: -1604095683
-      tembok2 1x3_2: -1347736432
+      lantai(3x3)_0: 1913805587
+      lantai(3x3)_1: -574159699
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

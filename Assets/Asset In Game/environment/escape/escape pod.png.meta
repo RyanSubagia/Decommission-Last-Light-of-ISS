@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 07cb9acbd78b12b43974e4ab5d5ed735
+guid: 3791d893034587744ab33304b3724d99
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tembok2 1x3_0
+      name: escape pod_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
+        x: 28
+        y: 17
+        width: 46
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 395b9e0e432a7d144bfba31d9ebadb0e
-      internalID: 412440030
+      spriteID: d2605e43350846145b7147c37b8b7d29
+      internalID: -2042179316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tembok2 1x3_1
+      name: escape pod_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 89
+        y: 55
+        width: 31
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e21bc5f170f7a0945bacbeb553d00099
-      internalID: -1604095683
+      spriteID: cbaa21f1899d10a40a10376d3c5d5d81
+      internalID: 348247447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tembok2 1x3_2
+      name: escape pod_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 90
+        y: 27
+        width: 31
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4592bcbcac0a3f84caadc94d24bed0a4
-      internalID: -1347736432
+      spriteID: 6788ef6a66b9e224884caf28c22f72d0
+      internalID: 1936810076
       vertices: []
       indices: 
       edges: []
@@ -190,9 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tembok2 1x3_0: 412440030
-      tembok2 1x3_1: -1604095683
-      tembok2 1x3_2: -1347736432
+      escape pod_0: -2042179316
+      escape pod_1: 348247447
+      escape pod_2: 1936810076
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
