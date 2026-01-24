@@ -53,7 +53,7 @@ public class EndingVideoController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(skipKey))
+        if (Input.GetKeyDown(skipKey) || Input.GetKeyDown(KeyCode.E))
         {
             LoadNextScene();
         }
@@ -119,6 +119,12 @@ public class EndingVideoController : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(nextSceneName))
         {
+
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.ResetForNewRun();
+            }
+
             SceneManager.LoadScene(nextSceneName);
         }
     }

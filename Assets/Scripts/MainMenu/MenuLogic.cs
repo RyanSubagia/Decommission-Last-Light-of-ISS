@@ -9,6 +9,10 @@ public class MenuLogic : MonoBehaviour
     [SerializeField] private GameObject howToPanel;
     public void PlayGame()
     {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.ResetForNewRun();
+        }
         SceneManager.LoadScene(introSceneName);
     }
 

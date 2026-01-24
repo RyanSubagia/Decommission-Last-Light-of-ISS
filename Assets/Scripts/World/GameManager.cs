@@ -17,12 +17,14 @@ public class GameManager : MonoBehaviour
 
     [Header("Scene Names")] 
     [SerializeField] private string endingSceneName = "Ending";
+    [SerializeField] private string gameSceneName = "Game";
 
     private float _remainingTime;
     private bool _countdownRunning;
     private bool _hasEnded;
 
     public GameEndType LastEndType { get; private set; } = GameEndType.None;
+    public bool IsCountdownRunning => _countdownRunning;
 
     private void Awake()
     {
@@ -39,6 +41,12 @@ public class GameManager : MonoBehaviour
         {
             fadeCanvasGroup.alpha = 0f;
         }
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void Update()
@@ -132,6 +140,57 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(endingSceneName);
         }
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+
+        if (scene.name == gameSceneName)
+        {
+
+            if (txtxCountdown == null)
+            {
+                var texts = Object.FindObjectsOfType<TMP_Text>();
+                foreach (var t in texts)
+                {
+                    if (t.name.ToLower().Contains("countdown"))
+                    {
+                        txtxCountdown = t;
+                        break;
+                    }
+                }
+            }
+
+            if (fadeCanvasGroup == null)
+            {
+                var groups = Object.FindObjectsOfType<CanvasGroup>();
+                foreach (var g in groups)
+                {
+                    if (g.name.ToLower().Contains("fade"))
+                    {
+                        fadeCanvasGroup = g;
+                        break;
+                    }
+                }
+            }
+
+            ResetForNewRun();
+        }
+    }
+
+    public void ResetForNewRun()
+    {
+        _hasEnded = false;
+        _countdownRunning = false;
+        _remainingTime = 0f;
+        LastEndType = GameEndType.None;
+
+        if (fadeCanvasGroup != null)
+        {
+            fadeCanvasGroup.alpha = 0f;
+        }
+
+        UpdateCountdownText();
     }
 }
 

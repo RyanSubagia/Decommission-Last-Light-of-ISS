@@ -16,6 +16,9 @@ public class DoorInteraction : MonoBehaviour
     [SerializeField] private bool requireKey;
     [SerializeField] private PlayerKeyInventory playerInventory;
 
+    [Header("Countdown Requirement")]
+    [SerializeField] private bool requireCountdownStarted;
+
     private bool _isPlayerInRange;
     private bool _isOpen;
     private bool _hasShownIndicator;
@@ -37,6 +40,19 @@ public class DoorInteraction : MonoBehaviour
             {
                 if (playerInventory == null || !playerInventory.HasKey)
                 {
+                    return;
+                }
+            }
+
+            if (requireCountdownStarted)
+            {
+                if (GameManager.Instance == null || !GameManager.Instance.IsCountdownRunning)
+                {
+                    if (HintMessageUI.Instance != null)
+                    {
+                        HintMessageUI.Instance.ShowMessage("System locked. \nPress decommission protocol button first.");
+                    }
+
                     return;
                 }
             }
@@ -92,6 +108,19 @@ public class DoorInteraction : MonoBehaviour
     {
         if (_isOpen)
             return;
+
+        if (requireCountdownStarted)
+        {
+            if (GameManager.Instance == null || !GameManager.Instance.IsCountdownRunning)
+            {
+                if (HintMessageUI.Instance != null)
+                {
+                    HintMessageUI.Instance.ShowMessage("System locked. Press the red button first.");
+                }
+
+                return;
+            }
+        }
 
         StartCoroutine(OpenDoorRoutine());
     }
