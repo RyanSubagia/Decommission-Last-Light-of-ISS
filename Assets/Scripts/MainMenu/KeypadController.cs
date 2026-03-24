@@ -8,23 +8,17 @@ public class KeypadController : MonoBehaviour
 
     [Header("Code Settings")]
     [Tooltip("Correct 6 digit code to unlock.")]
-    [SerializeField] private string correctCode = "123456";
+    [SerializeField] private string correctCode = "836294";
 
     [Header("Panels")] 
     [Tooltip("Root object (panel or canvas) for the keypad UI.")]
     [SerializeField] private GameObject keypadPanel;
 
-    [Tooltip("Root object (panel or canvas) for the note UI.")]
-    [SerializeField] private GameObject notePanel;
+    [Header("Door Unlock")]
+    [SerializeField] private DoorInteraction targetDoor;
 
-    [Header("Note Content")] 
-    [SerializeField] private NotePanelController notePanelController;
-
-    [TextArea]
-    [SerializeField] private string noteTitle;
-
-    [TextArea]
-    [SerializeField] private string noteBody;
+    [Header("Feedback")]
+    [SerializeField] private string incorrectMessage = "Password incorrect.";
 
     private const int MaxLength = 6;
 
@@ -80,18 +74,23 @@ public class KeypadController : MonoBehaviour
                 keypadPanel.SetActive(false);
             }
 
-            if (notePanelController != null)
+            if (targetDoor != null)
             {
-                notePanelController.ShowNote(noteTitle, noteBody);
-            }
-
-            if (notePanel != null)
-            {
-                notePanel.SetActive(true);
+                targetDoor.OpenFromConsole();
             }
         }
         else
         {
+            if (keypadPanel != null)
+            {
+                keypadPanel.SetActive(false);
+            }
+
+            if (HintMessageUI.Instance != null && !string.IsNullOrWhiteSpace(incorrectMessage))
+            {
+                HintMessageUI.Instance.ShowMessage(incorrectMessage);
+            }
+
             ClearInput();
         }
     }

@@ -104794,10 +104794,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionPanel: {fileID: 556853033}
   noteTitle: LOG KSDFVI1
-  noteBody: This fungus is growing at a terrifying rate. We even had to use the large
-    containment unit usually reserved for asteroids just to cage it. Yesterday, Joel
-    was exposed to the spores without proper protection during the transfer. He fell
-    ill immediately. Poor soul.
+  noteBody: "This fungus is growing at a terrifying rate. We even had to use the
+    large containment unit usually reserved for asteroids just to cage it. Yesterday,
+    Joel was exposed to the spores without proper protection during the transfer.
+    He fell ill immediately. Poor soul. The containment manifest lists Unit 6, Drawer
+    2 for the new filters.\r"
   notePanelController: {fileID: 556853035}
 --- !u!1 &44979464
 GameObject:
@@ -111233,7 +111234,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &181767169
 SpriteRenderer:
@@ -111478,7 +111479,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1767318701}
         m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
         m_MethodName: AddCharacter
         m_Mode: 5
@@ -111612,7 +111613,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1767318701}
         m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
         m_MethodName: ClearInput
         m_Mode: 1
@@ -111983,7 +111984,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &250159409
 MonoBehaviour:
@@ -112181,7 +112182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310947926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.2, y: -1.6200001, z: -10}
+  m_LocalPosition: {x: 4.5, y: -0.60000014, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -112408,7 +112409,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1767318701}
         m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
         m_MethodName: SubmitCode
         m_Mode: 1
@@ -117349,7 +117350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.2, y: -1.6200001, z: -10}
+  m_LocalPosition: {x: 4.5, y: -0.60000014, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -117645,7 +117646,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1767318701}
         m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
         m_MethodName: AddCharacter
         m_Mode: 5
@@ -118311,7 +118312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -118359,8 +118360,8 @@ CanvasGroup:
   m_GameObject: {fileID: 702299125}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!213 &722997388
 Sprite:
@@ -118756,7 +118757,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1767318701}
         m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
         m_MethodName: AddCharacter
         m_Mode: 5
@@ -118934,7 +118935,7 @@ Transform:
   - {fileID: 1448762373}
   - {fileID: 251109186}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &813818035
 PrefabInstance:
@@ -119692,7 +119693,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &978387808
 MonoBehaviour:
@@ -120057,7 +120058,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1767318701}
         m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
         m_MethodName: AddCharacter
         m_Mode: 5
@@ -120783,7 +120784,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1767318701}
         m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
         m_MethodName: AddCharacter
         m_Mode: 5
@@ -121060,7 +121061,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 3.577, y: 1.09, z: 2.155}
 --- !u!1 &1171266317
 GameObject:
@@ -152182,7 +152183,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1286076763
 MonoBehaviour:
@@ -152356,11 +152357,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionPanel: {fileID: 1638224611}
   noteTitle: LOG 61244A2A
-  noteBody: "Another Sunday on the ISS. That head scientist assigned me to take care
+  noteBody: Another Sunday on the ISS. That head scientist assigned me to take care
     of the new fungal sample shipped from Earth yesterday morning. It looks weird
-    at this stage. I think this thing is mutating? It\u2019s supposed to be just
-    normal black mold, but the cosmic radiation is doing something to it. Anyway,
-    I have to finish this assignment before I get into trouble."
+    at this stage. I think this thing is mutating? It's supposed to be just normal
+    black mold, but the cosmic radiation is doing something to it. Anyway, I have
+    to finish this assignment before I get into trouble. I logged the sample under
+    Bay 8, Rack 3 to keep it separate from the rest.
   notePanelController: {fileID: 1638224613}
 --- !u!1 &1349500496
 GameObject:
@@ -152786,6 +152788,22 @@ PrefabInstance:
     - target: {fileID: 2017362349, guid: d4f83d2406dcc8348a0b93cb02175c65, type: 3}
       propertyPath: m_Offset.x
       value: -0.6855563
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017362350, guid: d4f83d2406dcc8348a0b93cb02175c65, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017362350, guid: d4f83d2406dcc8348a0b93cb02175c65, type: 3}
+      propertyPath: interactKey
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017362350, guid: d4f83d2406dcc8348a0b93cb02175c65, type: 3}
+      propertyPath: keypadPanel
+      value: 
+      objectReference: {fileID: 1349500496}
+    - target: {fileID: 2017362350, guid: d4f83d2406dcc8348a0b93cb02175c65, type: 3}
+      propertyPath: requirePassword
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2428374350836862548, guid: d4f83d2406dcc8348a0b93cb02175c65, type: 3}
       propertyPath: m_RootOrder
@@ -153245,7 +153263,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1454712589
 GameObject:
@@ -153439,6 +153457,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2428374350836862548, guid: d4f83d2406dcc8348a0b93cb02175c65, type: 3}
   m_PrefabInstance: {fileID: 1442028633}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1471020447 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2017362350, guid: d4f83d2406dcc8348a0b93cb02175c65, type: 3}
+  m_PrefabInstance: {fileID: 1442028633}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7a42c654dcaba4f905d9128745ae6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1499272653
 GameObject:
   m_ObjectHideFlags: 0
@@ -153523,7 +153552,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1767318701}
         m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
         m_MethodName: AddCharacter
         m_Mode: 5
@@ -154172,7 +154201,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1767318701}
         m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
         m_MethodName: AddCharacter
         m_Mode: 5
@@ -156093,7 +156122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1767318701}
         m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
         m_MethodName: AddCharacter
         m_Mode: 5
@@ -156315,7 +156344,7 @@ Transform:
   - {fileID: 724463402}
   - {fileID: 1471020446}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1765733059
 GameObject:
@@ -156358,7 +156387,7 @@ Transform:
   - {fileID: 1838871965}
   - {fileID: 1931048295}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1767318700
 GameObject:
@@ -156389,37 +156418,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675b1deebe278794ca33b0789ecbfc4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayField: {fileID: 0}
-  correctCode: 123456
-  keypadPanel: {fileID: 0}
-  notePanel: {fileID: 0}
-  notePanelController: {fileID: 0}
-  noteTitle: LOG 918J
-  noteBody: 'If you are reading this, containment has failed.
-
-    This fungus cannot
-    be burned, cannot be starved, and cannot be reasoned with.
-
-    Exposure to cosmic
-    radiation made it worse, not weaker.
-
-
-    Do not try to save the station.
-
-    Do
-    not bring samples back.
-
-    Do not return to Earth.
-
-
-    Under no circumstances
-    let this fungus reach the planet.
-
-    If it touches Earth, humanity will not
-    survive.
-
-
-    The mission is no longer about coming home.'
+  displayField: {fileID: 438732420}
+  correctCode: 836294
+  keypadPanel: {fileID: 1349500496}
+  targetDoor: {fileID: 1471020447}
+  incorrectMessage: Hmm, incorrect password. Need to see the notes
 --- !u!4 &1767318702
 Transform:
   m_ObjectHideFlags: 0
@@ -156433,7 +156436,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1794019820
 GameObject:
@@ -156508,12 +156511,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionPanel: {fileID: 556853033}
   noteTitle: LOG SSUVBNSAS12
-  noteBody: 'Patient Name: Joel Mcbigger Condition: CRITICAL Synopsis: The patient
+  noteBody: "Patient Name: Joel Mcbigger Condition: CRITICAL Synopsis: The patient
     has been in the medical bay for two weeks. His condition briefly improved in
     the first few days, but for some reason, it deteriorated rapidly to this critical
     state. Initially, the fungus was only detected on the exposed area (his hand),
     but it has spread to other regions. The fungal roots are tracking toward his
-    blood vessels and settling in major organs to use them as breeding grounds.'
+    blood vessels and settling in major organs to use them as breeding grounds. I
+    moved him to Ward 9, Bed 4.\r"
   notePanelController: {fileID: 556853035}
 --- !u!1 &1808741008
 GameObject:
@@ -157838,7 +157842,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1767318701}
         m_TargetAssemblyTypeName: KeypadController, Assembly-CSharp
         m_MethodName: AddCharacter
         m_Mode: 5
@@ -158031,7 +158035,7 @@ Transform:
   - {fileID: 383884954}
   - {fileID: 1582779072}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2050052577
 GameObject:
@@ -158574,11 +158578,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1291885536816941961, guid: 63c2a0f0291b47545ba6025702d3caa5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.2
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 1291885536816941961, guid: 63c2a0f0291b47545ba6025702d3caa5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.12
+      value: -2.1
       objectReference: {fileID: 0}
     - target: {fileID: 1291885536816941961, guid: 63c2a0f0291b47545ba6025702d3caa5, type: 3}
       propertyPath: m_LocalPosition.z

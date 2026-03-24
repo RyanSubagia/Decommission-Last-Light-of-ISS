@@ -12,6 +12,10 @@ public class DoorInteraction : MonoBehaviour
     [SerializeField] private string openTriggerName = "Open"; 
     [SerializeField] private float openDelay = 1f; 
 
+    [Header("Password Requirement")]
+    [SerializeField] private bool requirePassword;
+    [SerializeField] private GameObject keypadPanel;
+
     [Header("Key Requirement")]
     [SerializeField] private bool requireKey;
     [SerializeField] private PlayerKeyInventory playerInventory;
@@ -36,6 +40,16 @@ public class DoorInteraction : MonoBehaviour
 
         if (_isPlayerInRange && Input.GetKeyDown(interactKey))
         {
+            if (requirePassword)
+            {
+                if (keypadPanel != null)
+                {
+                    keypadPanel.SetActive(true);
+                }
+
+                return;
+            }
+
             if (requireKey)
             {
                 if (playerInventory == null || !playerInventory.HasKey)
