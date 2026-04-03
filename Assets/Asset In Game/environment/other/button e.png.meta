@@ -113,6 +113,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -120,12 +132,12 @@ TextureImporter:
       name: button e_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 5
+        x: 93
+        y: 129
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,8 +153,176 @@ TextureImporter:
       name: button e_1
       rect:
         serializedVersion: 2
-        x: 45
-        y: 5
+        x: 128
+        y: 129
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c006e556f76414b849ca115a3be67a
+      internalID: -1985390325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button e_2
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 164
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c38b558614f254bac26eefe3fc4b66
+      internalID: 793060803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button e_3
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 164
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3644299a585724b49a133d525ee7f377
+      internalID: -1863431822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button e_4
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 131
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5abfbb051ed93ab4282c1a4ab5164471
+      internalID: 1746136001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button e_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 131
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e94b827dc808e46b8686c9d306b756
+      internalID: 217999054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button e_6
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 61
+        width: 121
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eaaa74858560ee43a76deb4988d4cd3
+      internalID: -875657236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button e_7
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 92
+        width: 121
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6308f904fabc9458c84b2bb577013b
+      internalID: 2141644197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button e_8
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 163
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90bea130541d44640afbd6114274c2b1
+      internalID: 1159949620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button e_9
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 163
         width: 32
         height: 30
       alignment: 0
@@ -152,8 +332,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41c006e556f76414b849ca115a3be67a
-      internalID: -1985390325
+      spriteID: 377f7d78a1967cb489b68fa3021d2c1f
+      internalID: 1537037469
       vertices: []
       indices: 
       edges: []
@@ -171,6 +351,14 @@ TextureImporter:
     nameFileIdTable:
       button e_0: 238540259
       button e_1: -1985390325
+      button e_2: 793060803
+      button e_3: -1863431822
+      button e_4: 1746136001
+      button e_5: 217999054
+      button e_6: -875657236
+      button e_7: 2141644197
+      button e_8: 1159949620
+      button e_9: 1537037469
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
