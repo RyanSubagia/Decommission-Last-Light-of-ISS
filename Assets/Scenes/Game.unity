@@ -80436,6 +80436,7 @@ MonoBehaviour:
   digitalNoteClip: {fileID: 8300000, guid: b3c0e1a78199dd344b505bb2adc51267, type: 3}
   sfxDuration: 1
   notePanelController: {fileID: 556853035}
+  goalNoteType: 0
 --- !u!82 &31310948
 AudioSource:
   m_ObjectHideFlags: 0
@@ -86697,6 +86698,7 @@ MonoBehaviour:
   digitalNoteClip: {fileID: 8300000, guid: b3c0e1a78199dd344b505bb2adc51267, type: 3}
   sfxDuration: 1
   notePanelController: {fileID: 556853035}
+  goalNoteType: 0
 --- !u!82 &66443005
 AudioSource:
   m_ObjectHideFlags: 0
@@ -88529,6 +88531,7 @@ MonoBehaviour:
   digitalNoteClip: {fileID: 0}
   sfxDuration: 1
   notePanelController: {fileID: 1638224613}
+  goalNoteType: 0
 --- !u!82 &383884957
 AudioSource:
   m_ObjectHideFlags: 0
@@ -93429,6 +93432,7 @@ MonoBehaviour:
   digitalNoteClip: {fileID: 0}
   sfxDuration: 1
   notePanelController: {fileID: 1638224613}
+  goalNoteType: 0
 --- !u!82 &532302769
 AudioSource:
   m_ObjectHideFlags: 0
@@ -127016,6 +127020,7 @@ MonoBehaviour:
   digitalNoteClip: {fileID: 0}
   sfxDuration: 1
   notePanelController: {fileID: 1638224613}
+  goalNoteType: 0
 --- !u!82 &1349371474
 AudioSource:
   m_ObjectHideFlags: 0
@@ -127481,7 +127486,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 730, y: -87}
+  m_AnchoredPosition: {x: 730, y: -53.2}
   m_SizeDelta: {x: 50, y: 40}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1397536212
@@ -127549,6 +127554,10 @@ PrefabInstance:
       propertyPath: keypadPanel
       value: 
       objectReference: {fileID: 1349500496}
+    - target: {fileID: 2017362350, guid: d4f83d2406dcc8348a0b93cb02175c65, type: 3}
+      propertyPath: isSecretDoor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2017362350, guid: d4f83d2406dcc8348a0b93cb02175c65, type: 3}
       propertyPath: requirePassword
       value: 1
@@ -128528,6 +128537,7 @@ MonoBehaviour:
   digitalNoteClip: {fileID: 8300000, guid: b3c0e1a78199dd344b505bb2adc51267, type: 3}
   sfxDuration: 1
   notePanelController: {fileID: 556853035}
+  goalNoteType: 2
   trueEndingButton: {fileID: 1931048292}
 --- !u!82 &1554833293
 AudioSource:
@@ -128708,6 +128718,7 @@ MonoBehaviour:
   digitalNoteClip: {fileID: 8300000, guid: b3c0e1a78199dd344b505bb2adc51267, type: 3}
   sfxDuration: 1
   notePanelController: {fileID: 556853035}
+  goalNoteType: 0
 --- !u!82 &1582779075
 AudioSource:
   m_ObjectHideFlags: 0
@@ -131583,6 +131594,7 @@ MonoBehaviour:
   digitalNoteClip: {fileID: 8300000, guid: b3c0e1a78199dd344b505bb2adc51267, type: 3}
   sfxDuration: 1
   notePanelController: {fileID: 556853035}
+  goalNoteType: 0
 --- !u!82 &1794019824
 AudioSource:
   m_ObjectHideFlags: 0
@@ -131763,6 +131775,7 @@ MonoBehaviour:
   digitalNoteClip: {fileID: 0}
   sfxDuration: 1
   notePanelController: {fileID: 1638224613}
+  goalNoteType: 0
 --- !u!82 &1808741012
 AudioSource:
   m_ObjectHideFlags: 0
@@ -131944,6 +131957,7 @@ MonoBehaviour:
   digitalNoteClip: {fileID: 0}
   sfxDuration: 1
   notePanelController: {fileID: 1638224613}
+  goalNoteType: 0
 --- !u!82 &1834994625
 AudioSource:
   m_ObjectHideFlags: 0
@@ -132176,6 +132190,8 @@ GameObject:
   - component: {fileID: 1840879682}
   - component: {fileID: 1840879684}
   - component: {fileID: 1840879683}
+  - component: {fileID: 1840879686}
+  - component: {fileID: 1840879685}
   m_Layer: 5
   m_Name: txtGoal
   m_TagString: Untagged
@@ -132200,7 +132216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -20, y: -20}
+  m_AnchoredPosition: {x: -20, y: 0.19999695}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1840879683
@@ -132250,15 +132266,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 10
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 12
-  m_fontSizeMax: 18
-  m_fontStyle: 0
+  m_fontSizeMin: 5
+  m_fontSizeMax: 10
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
-  m_VerticalAlignment: 8192
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -132286,7 +132302,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -32.84459, y: 0, z: -5.186029, w: 0}
+  m_margin: {x: -164.42126, y: 0, z: 2.0039337, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -132300,6 +132316,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840879681}
   m_CullTransparentMesh: 1
+--- !u!114 &1840879685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840879681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1ae37aac8c4de45af20a289c6d30fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goalText: {fileID: 1840879683}
+  defaultGoal: 
+  hideWhenEmpty: 0
+--- !u!114 &1840879686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840879681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 856d1972c0c62f148989e5018f1f0815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goalStart: Turn on the decommission protocol
+  goalFindLab: Find the lab research result
+  goalFindKey: Find the missing key
+  goalEscape: Escape the ISS
+  goalSeekTruth: Seek the truth
+  goalPreventImpact: Prevent ISS from entering Earth
 --- !u!1 &1876093718
 GameObject:
   m_ObjectHideFlags: 0
@@ -132655,6 +132704,7 @@ MonoBehaviour:
   digitalNoteClip: {fileID: 0}
   sfxDuration: 1
   notePanelController: {fileID: 1638224613}
+  goalNoteType: 0
 --- !u!82 &1890133282
 AudioSource:
   m_ObjectHideFlags: 0
@@ -133058,7 +133108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1931048293
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -134304,6 +134354,7 @@ MonoBehaviour:
   digitalNoteClip: {fileID: 0}
   sfxDuration: 1
   notePanelController: {fileID: 1638224613}
+  goalNoteType: 1
 --- !u!82 &2098167497
 AudioSource:
   m_ObjectHideFlags: 0
