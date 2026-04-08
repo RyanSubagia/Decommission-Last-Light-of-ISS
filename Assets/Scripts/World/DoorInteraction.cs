@@ -6,11 +6,16 @@ public class DoorInteraction : MonoBehaviour
     [Header("Components")]
     [SerializeField] private Animator animator;
     [SerializeField] private Collider2D blockingCollider;
+    [SerializeField] private AudioSource sfxSource;
 
     [Header("Interaction")]
     [SerializeField] private KeyCode interactKey = KeyCode.E;
     [SerializeField] private string openTriggerName = "Open"; 
     [SerializeField] private float openDelay = 1f; 
+
+    [Header("Door Audio")]
+    [SerializeField] private AudioClip openDoorClip;
+    [SerializeField, Min(0f)] private float sfxDuration = 1f;
 
     [Header("Password Requirement")]
     [SerializeField] private bool requirePassword;
@@ -23,6 +28,9 @@ public class DoorInteraction : MonoBehaviour
     [Header("Countdown Requirement")]
     [SerializeField] private bool requireCountdownStarted;
 
+    [Header("Goal Helper")]
+    [SerializeField] private bool isSecretDoor;
+
     private bool _isPlayerInRange;
     private bool _isOpen;
     private bool _hasShownIndicator;
@@ -31,6 +39,15 @@ public class DoorInteraction : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         blockingCollider = GetComponent<Collider2D>();
+        sfxSource = GetComponent<AudioSource>();
+    }
+
+    private void Awake()
+    {
+        if (sfxSource == null)
+        {
+            sfxSource = GetComponent<AudioSource>();
+        }
     }
 
     private void Update()
@@ -104,6 +121,8 @@ public class DoorInteraction : MonoBehaviour
     {
         _isOpen = true;
 
+        PlayDoorSfx();
+
         if (animator != null && !string.IsNullOrEmpty(openTriggerName))
         {
             animator.SetTrigger(openTriggerName);
@@ -116,6 +135,29 @@ public class DoorInteraction : MonoBehaviour
         {
             blockingCollider.enabled = false;
         }
+
+        if (isSecretDoor && GoalProgression.Instance != null)
+        {
+            GoalProgression.Instance.OnSecretDoorOpened();
+        }
+    }
+
+    private void PlayDoorSfx()
+    {
+        if (sfxSource == null || openDoorClip == null)
+            return;
+
+        sfxSource.PlayOneShot(openDoorClip);
+        if (sfxDuration > 0f)
+        {
+            StartCoroutine(StopSfxAfterDelay(sfxDuration));
+        }
+    }
+
+    private IEnumerator StopSfxAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        sfxSource.Stop();
     }
 
     public void OpenFromConsole()

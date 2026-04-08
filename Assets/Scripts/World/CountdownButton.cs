@@ -21,6 +21,11 @@ public class CountdownButton : MonoBehaviour
             {
                 GameManager.Instance.StartCountdown();
             }
+
+            if (GoalProgression.Instance != null)
+            {
+                GoalProgression.Instance.OnDecommissionStarted();
+            }
         }
     }
 

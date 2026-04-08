@@ -16,6 +16,11 @@ public class PlayerKeyInventory : MonoBehaviour
     {
         HasKey = true;
         UpdateIndicator();
+
+        if (GoalProgression.Instance != null)
+        {
+            GoalProgression.Instance.OnKeyFound();
+        }
     }
 
     private void UpdateIndicator()

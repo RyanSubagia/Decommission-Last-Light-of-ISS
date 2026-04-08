@@ -97,6 +97,11 @@ public class DoorConsoleInteraction : MonoBehaviour
         }
 
         _isMessageOpen = true;
+
+        if (GoalProgression.Instance != null)
+        {
+            GoalProgression.Instance.OnLockedDoorFound();
+        }
     }
 
     private void HideMissingKeyMessage()
