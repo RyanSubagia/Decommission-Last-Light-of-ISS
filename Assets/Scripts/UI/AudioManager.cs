@@ -17,12 +17,30 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
+            if (instance.sfxSource == null)
+            {
+                instance.sfxSource = sfxSource;
+            }
+
+            if (instance.clickSound == null)
+            {
+                instance.clickSound = clickSound;
+            }
+
             Destroy(gameObject);
         }
     }
 
     public void PlayClickSFX()
     {
+        if (sfxSource == null)
+        {
+            sfxSource = GetComponent<AudioSource>();
+        }
+
+        if (sfxSource == null || clickSound == null)
+            return;
+
         sfxSource.PlayOneShot(clickSound);
     }
 }

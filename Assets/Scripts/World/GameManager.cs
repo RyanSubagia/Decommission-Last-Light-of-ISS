@@ -127,6 +127,8 @@ public class GameManager : MonoBehaviour
         if (fadeCanvasGroup != null)
         {
             float elapsed = 0f;
+            fadeCanvasGroup.blocksRaycasts = true;
+            fadeCanvasGroup.interactable = true;
             while (elapsed < fadeDuration)
             {
                 elapsed += Time.deltaTime;
@@ -144,10 +146,8 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-
         if (scene.name == gameSceneName)
         {
-
             if (txtxCountdown == null)
             {
                 var texts = Object.FindObjectsOfType<TMP_Text>();
@@ -175,6 +175,14 @@ public class GameManager : MonoBehaviour
             }
 
             ResetForNewRun();
+            return;
+        }
+
+        if (fadeCanvasGroup != null)
+        {
+            fadeCanvasGroup.alpha = 0f;
+            fadeCanvasGroup.blocksRaycasts = false;
+            fadeCanvasGroup.interactable = false;
         }
     }
 
@@ -188,6 +196,8 @@ public class GameManager : MonoBehaviour
         if (fadeCanvasGroup != null)
         {
             fadeCanvasGroup.alpha = 0f;
+            fadeCanvasGroup.blocksRaycasts = false;
+            fadeCanvasGroup.interactable = false;
         }
 
         UpdateCountdownText();

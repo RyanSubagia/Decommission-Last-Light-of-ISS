@@ -18650,7 +18650,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 978387808}
         m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -48969,7 +48969,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 978387808}
         m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
         m_MethodName: CloseHowTo
         m_Mode: 1
@@ -50011,34 +50011,8 @@ MonoBehaviour:
   displayField: {fileID: 0}
   correctCode: 123456
   keypadPanel: {fileID: 0}
-  notePanel: {fileID: 0}
-  notePanelController: {fileID: 0}
-  noteTitle: LOG 918J
-  noteBody: 'If you are reading this, containment has failed.
-
-    This fungus cannot
-    be burned, cannot be starved, and cannot be reasoned with.
-
-    Exposure to cosmic
-    radiation made it worse, not weaker.
-
-
-    Do not try to save the station.
-
-    Do
-    not bring samples back.
-
-    Do not return to Earth.
-
-
-    Under no circumstances
-    let this fungus reach the planet.
-
-    If it touches Earth, humanity will not
-    survive.
-
-
-    The mission is no longer about coming home.'
+  targetDoor: {fileID: 0}
+  incorrectMessage: Password incorrect.
 --- !u!4 &1767318702
 Transform:
   m_ObjectHideFlags: 0
@@ -50442,7 +50416,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 978387808}
         m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
         m_MethodName: OpenHowTo
         m_Mode: 1

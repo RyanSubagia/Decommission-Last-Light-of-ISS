@@ -114,6 +114,7 @@ public class DoorInteraction : MonoBehaviour
         {
             _isPlayerInRange = false;
             indicator.Hide();
+            _hasShownIndicator = false;
         }
     }
 
