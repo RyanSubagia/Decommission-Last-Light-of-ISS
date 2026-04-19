@@ -20,10 +20,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip moonwalkClip;
+
     private float horizontalInput;
     private bool isGrounded;
     private bool jumpRequested;
     private int facingDirection = 1; 
+    private int walkLeftStateHash;
+    private int walkRightStateHash;
 
     private const int STATE_IDLE = 0;
     private const int STATE_WALK_RIGHT = 1;
@@ -36,6 +42,10 @@ public class PlayerMovement : MonoBehaviour
         if (rb == null) rb = GetComponent<Rigidbody2D>();
         if (animator == null) animator = GetComponent<Animator>();
         if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
+        if (audioSource == null) audioSource = GetComponent<AudioSource>();
+
+        walkLeftStateHash = Animator.StringToHash("walking_left");
+        walkRightStateHash = Animator.StringToHash("walking_right");
     }
 
     private void Update()
@@ -101,5 +111,30 @@ public class PlayerMovement : MonoBehaviour
         }
 
         rb.velocity = velocity;
+
+        // Moonwalk: current walk animation opposite to actual movement direction.
+        int currentStateHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
+        bool isMoonwalking = isGrounded
+            && Mathf.Abs(velocity.x) > 0.01f
+            && ((currentStateHash == walkLeftStateHash && velocity.x > 0.01f)
+                || (currentStateHash == walkRightStateHash && velocity.x < -0.01f));
+
+        if (audioSource != null && moonwalkClip != null)
+        {
+            if (isMoonwalking)
+            {
+                if (!audioSource.isPlaying || audioSource.clip != moonwalkClip)
+                {
+                    audioSource.clip = moonwalkClip;
+                    audioSource.loop = true;
+                    audioSource.Play();
+                }
+            }
+            else if (audioSource.isPlaying && audioSource.clip == moonwalkClip)
+            {
+                audioSource.Stop();
+                audioSource.loop = false;
+            }
+        }
     }
 }

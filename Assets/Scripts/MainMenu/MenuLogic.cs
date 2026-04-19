@@ -25,6 +25,14 @@ public class MenuLogic : MonoBehaviour
 #endif
     }
 
+    public void PlayClickSfx()
+    {
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlayClickSFX();
+        }
+    }
+
     public void OpenHowTo()
     {
         howToPanel.SetActive(true);
