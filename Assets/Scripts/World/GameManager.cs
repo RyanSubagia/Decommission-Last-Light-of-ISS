@@ -37,10 +37,8 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        if (fadeCanvasGroup != null)
-        {
-            fadeCanvasGroup.alpha = 0f;
-        }
+        TryFindFadeCanvasGroup();
+        ResetFadeOverlay();
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -123,6 +121,8 @@ public class GameManager : MonoBehaviour
 
         LastEndType = endType;
 
+        TryFindFadeCanvasGroup();
+
         // Fade to black
         if (fadeCanvasGroup != null)
         {
@@ -141,11 +141,18 @@ public class GameManager : MonoBehaviour
         if (!string.IsNullOrEmpty(endingSceneName))
         {
             SceneManager.LoadScene(endingSceneName);
+
+            // Ensure the persistent fade overlay does not remain visible/interactive in Ending.
+            yield return null;
+            TryFindFadeCanvasGroup();
+            ResetFadeOverlay();
         }
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        TryFindFadeCanvasGroup();
+
         if (scene.name == gameSceneName)
         {
             if (txtxCountdown == null)
@@ -161,29 +168,11 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            if (fadeCanvasGroup == null)
-            {
-                var groups = Object.FindObjectsOfType<CanvasGroup>();
-                foreach (var g in groups)
-                {
-                    if (g.name.ToLower().Contains("fade"))
-                    {
-                        fadeCanvasGroup = g;
-                        break;
-                    }
-                }
-            }
-
             ResetForNewRun();
             return;
         }
 
-        if (fadeCanvasGroup != null)
-        {
-            fadeCanvasGroup.alpha = 0f;
-            fadeCanvasGroup.blocksRaycasts = false;
-            fadeCanvasGroup.interactable = false;
-        }
+        ResetFadeOverlay();
     }
 
     public void ResetForNewRun()
@@ -193,14 +182,36 @@ public class GameManager : MonoBehaviour
         _remainingTime = 0f;
         LastEndType = GameEndType.None;
 
+        TryFindFadeCanvasGroup();
+        ResetFadeOverlay();
+
+        UpdateCountdownText();
+    }
+
+    private void TryFindFadeCanvasGroup()
+    {
+        if (fadeCanvasGroup != null)
+            return;
+
+        var groups = Object.FindObjectsOfType<CanvasGroup>();
+        foreach (var g in groups)
+        {
+            if (g.name.ToLower().Contains("fade"))
+            {
+                fadeCanvasGroup = g;
+                break;
+            }
+        }
+    }
+
+    private void ResetFadeOverlay()
+    {
         if (fadeCanvasGroup != null)
         {
             fadeCanvasGroup.alpha = 0f;
             fadeCanvasGroup.blocksRaycasts = false;
             fadeCanvasGroup.interactable = false;
         }
-
-        UpdateCountdownText();
     }
 }
 

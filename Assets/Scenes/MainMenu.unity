@@ -18058,7 +18058,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxSource: {fileID: 791132433}
+  bgmSource: {fileID: 1894883083}
   clickSound: {fileID: 8300000, guid: 91ef8db3732eef2498384744bf8336b1, type: 3}
+  loseStinger: {fileID: 8300000, guid: 869e4a3012752264aa54d0722789e30d, type: 3}
+  loseTransitionDuration: 0.4
 --- !u!1 &830541956
 GameObject:
   m_ObjectHideFlags: 0
