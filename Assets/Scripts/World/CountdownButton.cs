@@ -1,10 +1,14 @@
 using UnityEngine;
+using System.Collections; 
 
 public class CountdownButton : MonoBehaviour
 {
     [Header("Interaction")]
     [SerializeField] private KeyCode interactKey = KeyCode.E;
 
+    [Header("Effects")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip alarmSound;
     private bool _isPlayerInRange;
     private bool _used;
 
@@ -17,6 +21,18 @@ public class CountdownButton : MonoBehaviour
         {
             _used = true;
 
+            if (audioSource != null && alarmSound != null)
+            {
+                audioSource.clip = alarmSound;
+                audioSource.Play();
+                StartCoroutine(StopAudioAfterDelay(1f)); 
+            }
+            else
+            {
+                Debug.LogWarning("AudioSource or AlarmSound is missing on CountdownButton.");
+            }
+
+
             if (GameManager.Instance != null)
             {
                 GameManager.Instance.StartCountdown();
@@ -26,6 +42,16 @@ public class CountdownButton : MonoBehaviour
             {
                 GoalProgression.Instance.OnDecommissionStarted();
             }
+        }
+    }
+
+    private IEnumerator StopAudioAfterDelay(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        
+        if (audioSource != null)
+        {
+            audioSource.Stop();
         }
     }
 

@@ -30,6 +30,9 @@ public class NoteInteractable : Interactable
     [Header("Note Panel Controller")]
     [SerializeField] private NotePanelController notePanelController;
 
+    [Header("Session Log")]
+    [SerializeField] private string sessionLogId;
+
     [Header("Goal Helper")]
     [SerializeField] private GoalNoteType goalNoteType = GoalNoteType.None;
 
@@ -49,6 +52,8 @@ public class NoteInteractable : Interactable
         {
             notePanelController.ShowNote(noteTitle, noteBody);
         }
+
+        SessionNoteLog.Record(GetSessionLogId(), noteTitle, noteBody);
 
         if (GoalProgression.Instance != null)
         {
@@ -98,5 +103,31 @@ public class NoteInteractable : Interactable
     {
         yield return new WaitForSeconds(delay);
         sfxSource.Stop();
+    }
+
+    private string GetSessionLogId()
+    {
+        if (!string.IsNullOrWhiteSpace(sessionLogId))
+            return sessionLogId.Trim();
+
+        if (!string.IsNullOrWhiteSpace(noteTitle))
+            return noteTitle.Trim();
+
+        return BuildTransformPath(transform);
+    }
+
+    private static string BuildTransformPath(Transform current)
+    {
+        if (current == null)
+            return string.Empty;
+
+        var path = current.name;
+        while (current.parent != null)
+        {
+            current = current.parent;
+            path = current.name + "/" + path;
+        }
+
+        return path;
     }
 }
